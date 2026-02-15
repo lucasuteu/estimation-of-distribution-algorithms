@@ -21,8 +21,8 @@ string make_name(const string& algo, const string& fitness, size_t T, size_t n, 
 }
 
 int main() {
-    string fitness_name = "LeadingOnes";
-    Fitness fitness = LeadingOnes; //[](Individual& x) {return Jump(x, 5);};
+    string fitness_name = "OnAndOff";
+    Fitness fitness = OnAndOff; //[](Individual& x) {return Jump(x, 5);};
     const string out_dir = "data";
 
     std::filesystem::create_directories(out_dir);

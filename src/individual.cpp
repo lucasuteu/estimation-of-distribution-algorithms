@@ -5,13 +5,13 @@ using namespace std;
 
 int random_int(int a, int b) {
     if (a == b) return a;
-    static mt19937 gen(random_device{}());
+    static mt19937 gen(42);
     uniform_int_distribution<int> dist(a, b-1);
     return dist(gen);
 }
 
 double rand01() {
-    static std::mt19937 gen(std::random_device{}());
+    static std::mt19937 gen(42);
     static std::uniform_real_distribution<double> dist(0.0, 1.0);
     return dist(gen);   // in [0,1)
 }

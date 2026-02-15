@@ -23,6 +23,7 @@ int OneMax(Individual& x);
 int LeadingOnes(Individual& x);
 
 int Jump(Individual& x, int k);
+int OnAndOff(Individual& x);
 
 bool term(Individual& x, const Fitness& f, std::size_t t, std::size_t T);
 

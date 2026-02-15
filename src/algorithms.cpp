@@ -154,10 +154,10 @@ int Jump(Individual& x, int k) { // Modified so that max jump = n
     return x.n - k - x.nb_ones;
 }
 
-int offAndOn(Individual& x) {
+int OnAndOff(Individual& x) {
     int score = 0;
 
-    for (int i = 0; i < x.n-1; ++i) {
+    for (size_t i = 0; i+1 < x.n; ++i) {
         score += (x.get(i) == true && x.get(i+1) == false);
         score += (x.get(x.n-(i+1)) == true && x.get(x.n - (i+2)) == false);
     }
